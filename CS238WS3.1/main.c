@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* http://www.learn-c.org/en/Linked_lists */
 struct node {
     char  title[100];
     char  author[60];
@@ -38,11 +37,8 @@ void add(char newTitle[100], char newAuthor[60], long newISBN) {
         head = link;
         current = link;
     } else { //It isn't the first item and we need to find where to put it in the array
-        struct node *ptr = head;
-        int added = 0;
-        while(!added){
+        while(1){
             if (newISBN < head->ISBN) {//The current item needs to go in the head
-                added=1;
                 struct node *oldNext = head;
                 head = (struct node *) malloc(sizeof(struct node));//store new head as memaloc
                 head->next = oldNext;
@@ -56,6 +52,8 @@ void add(char newTitle[100], char newAuthor[60], long newISBN) {
                 strcpy(ptr->next->author, newAuthor);
                 ptr->next->ISBN = newISBN;
                 ptr->next->next = NULL;
+                current=ptr->next;
+                break;
             } else if (newISBN > ptr->ISBN) { //Its higher than the current
                 if (newISBN < (ptr->next->ISBN)) {//Its inbetween the current and the next
                     struct node *oldNext = ptr->next;//store ptr next in temp
@@ -64,6 +62,7 @@ void add(char newTitle[100], char newAuthor[60], long newISBN) {
                     strcpy(ptr->next->title, newTitle);
                     strcpy(ptr->next->author, newAuthor);
                     ptr->next->ISBN = newISBN;
+                    break;
                 }
                 else {
                     ptr = ptr->next;
@@ -71,8 +70,8 @@ void add(char newTitle[100], char newAuthor[60], long newISBN) {
             } else {
                 //We have probably broken something
                 //Go onto the next item of the array for lolz
+                printf("fuck");
                 ptr = ptr->next;
-                added = 1;
             }
         }
     }
@@ -82,7 +81,7 @@ void add(char newTitle[100], char newAuthor[60], long newISBN) {
 void searchByISBN(long findISBN){
     struct node *ptr = head;
     while (ptr!=NULL){//Check if we have reached the end of the array
-        long thisISBN = (long) (ptr->ISBN);
+        long thisISBN = (ptr->ISBN);
         if (thisISBN==findISBN){
             printf("!! %s - %s - %ld !!\n", ptr->title, ptr->author, ptr->ISBN);
             break;
