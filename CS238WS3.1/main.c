@@ -97,5 +97,5 @@ int main() {
     add("Exams101", "Dr. Dave", 5);
     add("Linux into Putty", "Josh Gadd", 6);
     printList();
-    searchByISBN(6);
+    searchByISBN(5);
 }
