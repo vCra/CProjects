@@ -16,13 +16,18 @@ int main(int argc, char** argv) {
     int i;
     /* Note, STDIN_FILENO is a macro defined in unistd which has the value 0,
     that is, the file descriptor number of standard input
-    */status = read(open(fileString, O_RDONLY), my_buffer, sizeof(my_buffer));
+    */
+    file = open(fileString, O_RDONLY);
+    status = read(file, my_buffer, sizeof(my_buffer));
     printf("We read in %d bytes\n", (int) status);
     for (i=0; i< status ; i++)
     {
         printf("The code of byte %d is %d\n", i, my_buffer[i]);
-        status = read(open(fileString, O_RDONLY), my_buffer, sizeof(my_buffer));
-        printf("We read in %d bytes\n", (int) status);
+    }
+    status = read(file, my_buffer, sizeof(my_buffer));
+    for (i=0; i< status ; i++)
+    {
+        printf("The code of byte %d is %d\n", i, my_buffer[i]);
     }
     return (EXIT_SUCCESS);
 }

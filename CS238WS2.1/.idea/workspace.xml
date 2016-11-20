@@ -13,8 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d32d73cb-7593-4ac7-8521-a1830f6aade5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS3.1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CS238WS3.1/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS3.1/main.c" afterPath="$PROJECT_DIR$/../CS238WS3.1/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS4.1/.idea/CS238WS4.iml" afterPath="$PROJECT_DIR$/../CS238WS4.1/.idea/CS238WS4.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS4.1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CS238WS4.1/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS4.2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CS238WS4.2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS4.2/main.cpp" afterPath="$PROJECT_DIR$/../CS238WS4.2/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CS238WS4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CS238WS4/.idea/workspace.xml" />
     </list>
     <ignored path="CS238WS2.3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +50,7 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="162">
               <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="25" />
               <folding />
             </state>
@@ -331,17 +334,18 @@
       <workItem from="1478033512275" duration="551000" />
       <workItem from="1478521382682" duration="753000" />
       <workItem from="1478534101501" duration="604000" />
+      <workItem from="1479421629125" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5983000" />
+    <option name="totallyTimeSpent" value="5996000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1026" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1026" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25316456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -499,7 +503,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="25" />
           <folding />
         </state>
