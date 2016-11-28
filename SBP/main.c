@@ -1,7 +1,8 @@
-#define PORT 40001
+#define PORT 40000
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <strings.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -60,7 +61,9 @@ void load(int sid1, int sid2, int sid3){
 }
 int auth(FILE * outchannel, FILE * inchannel){
     char buffer[256];
-    int c = read(inchannel, buffer, 255);
+    bzero(buffer, 255);
+
+    int c = rec(inchannel, buffer, 256);
     fprintf(outchannel, "Welcome %s", buffer);
 
 }
