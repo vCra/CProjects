@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/CS238Assign.dir/main.cpp.o CMakeFiles/CS238Assign.dir/vehicle.cpp.o  -o CS238Assign 

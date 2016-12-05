@@ -48,10 +48,10 @@ RM = /opt/JetBrains/CLion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3
+CMAKE_SOURCE_DIR = /home/aaron@vcra.net/ClionProjects/CS238Assign
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,98 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named WS6_3
+# Target rules for targets named CS238Assign
 
 # Build rule for target.
-WS6_3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 WS6_3
-.PHONY : WS6_3
+CS238Assign: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CS238Assign
+.PHONY : CS238Assign
 
 # fast build rule for target.
-WS6_3/fast:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/build
-.PHONY : WS6_3/fast
-
-Date.o: Date.cpp.o
-
-.PHONY : Date.o
-
-# target to build an object file
-Date.cpp.o:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Date.cpp.o
-.PHONY : Date.cpp.o
-
-Date.i: Date.cpp.i
-
-.PHONY : Date.i
-
-# target to preprocess a source file
-Date.cpp.i:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Date.cpp.i
-.PHONY : Date.cpp.i
-
-Date.s: Date.cpp.s
-
-.PHONY : Date.s
-
-# target to generate assembly for a file
-Date.cpp.s:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Date.cpp.s
-.PHONY : Date.cpp.s
-
-Employee.o: Employee.cpp.o
-
-.PHONY : Employee.o
-
-# target to build an object file
-Employee.cpp.o:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Employee.cpp.o
-.PHONY : Employee.cpp.o
-
-Employee.i: Employee.cpp.i
-
-.PHONY : Employee.i
-
-# target to preprocess a source file
-Employee.cpp.i:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Employee.cpp.i
-.PHONY : Employee.cpp.i
-
-Employee.s: Employee.cpp.s
-
-.PHONY : Employee.s
-
-# target to generate assembly for a file
-Employee.cpp.s:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Employee.cpp.s
-.PHONY : Employee.cpp.s
-
-Pension.o: Pension.cpp.o
-
-.PHONY : Pension.o
-
-# target to build an object file
-Pension.cpp.o:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Pension.cpp.o
-.PHONY : Pension.cpp.o
-
-Pension.i: Pension.cpp.i
-
-.PHONY : Pension.i
-
-# target to preprocess a source file
-Pension.cpp.i:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Pension.cpp.i
-.PHONY : Pension.cpp.i
-
-Pension.s: Pension.cpp.s
-
-.PHONY : Pension.s
-
-# target to generate assembly for a file
-Pension.cpp.s:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/Pension.cpp.s
-.PHONY : Pension.cpp.s
+CS238Assign/fast:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/build
+.PHONY : CS238Assign/fast
 
 main.o: main.cpp.o
 
@@ -210,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -219,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -228,8 +147,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+vehicle.o: vehicle.cpp.o
+
+.PHONY : vehicle.o
+
+# target to build an object file
+vehicle.cpp.o:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/vehicle.cpp.o
+.PHONY : vehicle.cpp.o
+
+vehicle.i: vehicle.cpp.i
+
+.PHONY : vehicle.i
+
+# target to preprocess a source file
+vehicle.cpp.i:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/vehicle.cpp.i
+.PHONY : vehicle.cpp.i
+
+vehicle.s: vehicle.cpp.s
+
+.PHONY : vehicle.s
+
+# target to generate assembly for a file
+vehicle.cpp.s:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/vehicle.cpp.s
+.PHONY : vehicle.cpp.s
 
 # Help Target
 help:
@@ -239,19 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... WS6_3"
-	@echo "... Date.o"
-	@echo "... Date.i"
-	@echo "... Date.s"
-	@echo "... Employee.o"
-	@echo "... Employee.i"
-	@echo "... Employee.s"
-	@echo "... Pension.o"
-	@echo "... Pension.i"
-	@echo "... Pension.s"
+	@echo "... CS238Assign"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vehicle.o"
+	@echo "... vehicle.i"
+	@echo "... vehicle.s"
 .PHONY : help
 
 

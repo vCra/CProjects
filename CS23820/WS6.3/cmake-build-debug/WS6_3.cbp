@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Date.cpp">
+			<Option target="WS6_3"/>
+		</Unit>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Date.h">
+			<Option target="WS6_3"/>
+		</Unit>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Employee.cpp">
+			<Option target="WS6_3"/>
+		</Unit>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Employee.h">
+			<Option target="WS6_3"/>
+		</Unit>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Pension.cpp">
+			<Option target="WS6_3"/>
+		</Unit>
+		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/Pension.h">
+			<Option target="WS6_3"/>
+		</Unit>
 		<Unit filename="/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/main.cpp">
 			<Option target="WS6_3"/>
 		</Unit>

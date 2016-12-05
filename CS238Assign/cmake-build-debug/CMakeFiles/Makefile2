@@ -54,45 +54,45 @@ RM = /opt/JetBrains/CLion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3
+CMAKE_SOURCE_DIR = /home/aaron@vcra.net/ClionProjects/CS238Assign
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/WS6_3.dir
+# Target rules for target CMakeFiles/CS238Assign.dir
 
 # All Build rule for target.
-CMakeFiles/WS6_3.dir/all:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/depend
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target WS6_3"
-.PHONY : CMakeFiles/WS6_3.dir/all
+CMakeFiles/CS238Assign.dir/all:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/depend
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target CS238Assign"
+.PHONY : CMakeFiles/CS238Assign.dir/all
 
 # Include target in all.
-all: CMakeFiles/WS6_3.dir/all
+all: CMakeFiles/CS238Assign.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/WS6_3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WS6_3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS23820/WS6.3/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/WS6_3.dir/rule
+CMakeFiles/CS238Assign.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CS238Assign.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaron@vcra.net/ClionProjects/CS238Assign/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/CS238Assign.dir/rule
 
 # Convenience name for target.
-WS6_3: CMakeFiles/WS6_3.dir/rule
+CS238Assign: CMakeFiles/CS238Assign.dir/rule
 
-.PHONY : WS6_3
-
-# clean rule for target.
-CMakeFiles/WS6_3.dir/clean:
-	$(MAKE) -f CMakeFiles/WS6_3.dir/build.make CMakeFiles/WS6_3.dir/clean
-.PHONY : CMakeFiles/WS6_3.dir/clean
+.PHONY : CS238Assign
 
 # clean rule for target.
-clean: CMakeFiles/WS6_3.dir/clean
+CMakeFiles/CS238Assign.dir/clean:
+	$(MAKE) -f CMakeFiles/CS238Assign.dir/build.make CMakeFiles/CS238Assign.dir/clean
+.PHONY : CMakeFiles/CS238Assign.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CS238Assign.dir/clean
 
 .PHONY : clean
 
