@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aaron@vcra.net/ClionProjects/CS238WS4.2/main.cpp
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+
