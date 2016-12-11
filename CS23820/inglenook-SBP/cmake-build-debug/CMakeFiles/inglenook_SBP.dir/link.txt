@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/inglenook_SBP.dir/main.c.o  -o inglenook_SBP 
