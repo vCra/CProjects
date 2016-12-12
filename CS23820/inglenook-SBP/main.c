@@ -3,25 +3,116 @@
 #include <unistd.h>
 #include <netdb.h>
 #include <strings.h>
+#include <string.h>
 
-void doprocessing (int sock) {
+void showWelcome(int sock){
+    write(sock,"Inglenook sidings aaw13\n",25);
+
+}
+typedef struct {
+    char status;
+} point;
+
+typedef struct siding{
+    int Capacity;
+    int Stored; //the ammount of wagons currently in the
+} siding;
+typedef struct {
+    siding Sidings[4];
+    point Points[2];
+} track;
+
+void movePoints(int siding){
+    switch(siding){
+        case 1:
+            track.Points[0].status='R';
+            break;
+        case 2:
+            track.Points[0].status='N';
+            track.Points[1].status='R';
+            break;
+        case 3:
+            track.Points[0].status='N';
+            track.Points[1].status='N';
+            break;
+    }
+
+}
+
+int trackPut(int sidingNumber, int numberWagons, track track){
+    if(track.Sidings[sidingNumber].Stored + numberWagons > track.Sidings[sidingNumber].Capacity){
+        return -1;
+    }
+    else if(track.Sidings[0].Stored < numberWagons){
+        return -2;
+    }
+    else if((sidingNumber < 0)||(sidingNumber> 3)){
+        return -3;
+    }
+    else{
+        movePoints(sidingNumber);
+        return numberWagons;
+
+    }
+};
+int trackTake(int sidingNumber, int numberWagons, track Track){
+    if(track.Sidings[0].Stored+numberWagons > track.Sidings[0].Capacity){
+        return -1;
+    }
+    else if(track.Sidings[sidingNumber].Stored < numberWagons){
+        return -2;
+    }
+    else if (sidingNumber <3 || sidingNumber>3){
+        return -3;
+    }
+};
+int trackLoad(int s1, int s2, int s3, track Track){
+    track.Sidings[1].Stored=s1;
+    track.Sidings[2].Stored=s2;
+    track.Sidings[3].Stored=s3;
+};
+
+int processSocket (int sock, track track){
     int n;
     char buffer[256];
     bzero(buffer,256);
     n = read(sock,buffer,255);
-
     if (n < 0) {
         perror("ERROR reading from socket");
         exit(1);
     }
 
-    printf("Here is the message: %s\n",buffer);
-    n = write(sock,"I got your message",18);
+    char *a1;//Text argument
+    int a2, a3, a4;//Numeric arguments
+    int s; //For status
 
+    a1 = strtok(buffer, " "); //split it up
+    if (a1=="put"){
+
+        a2 = atoi(atoi(a2));
+        a3 = atoi(atoi(a3));
+        s = trackPut(a2, a3, track);
+
+        n = write(sock,"",20);
+    }
+    else if (a1=="take"){
+        a2 = atoi(atoi(a2));
+        a3 = atoi(atoi(a3));
+        trackTake(a2,a3, track);
+    }
+    else if (a1=="load"){
+        a2 = atoi(atoi(a2));
+        a3 = atoi(atoi(a3));
+        a4 = atoi(atoi(a4));
+        trackLoad(a2,a3,a4, track);
+    }
+
+    n = write(sock,"I got your message\n",20);
     if (n < 0) {
         perror("ERROR writing to socket");
         exit(1);
     }
+    return 0;
 }
 
 int main( int argc, char *argv[] ) {
@@ -29,6 +120,9 @@ int main( int argc, char *argv[] ) {
     char buffer[256];
     struct sockaddr_in serv_addr, cli_addr;
     int n, pid;
+
+    track Track;
+
 
     /* First call to socket() function */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -40,7 +134,7 @@ int main( int argc, char *argv[] ) {
 
     /* Initialize socket structure */
     bzero((char *) &serv_addr, sizeof(serv_addr));
-    portno = 5001;
+    portno = 123456;
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
@@ -72,12 +166,18 @@ int main( int argc, char *argv[] ) {
 
         if (pid == 0) {
             close(sockfd);
-            doprocessing(newsockfd);
+            showWelcome(newsockfd);
+            int stop=0;
+            while(stop==0){
+                stop = processSocket(newsockfd, Track);
+            }
+
             exit(0);
         }
         else {
             close(newsockfd);
         }
+        write(newsockfd,"Goodbye\n",23);
 
     } /* end of while */
 }
