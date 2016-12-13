@@ -22,54 +22,58 @@ typedef struct {
     point Points[2];
 } track;
 
-void movePoints(int siding){
+void movePoints(int siding, track Track){
     switch(siding){
         case 1:
-            track.Points[0].status='R';
+            Track.Points[0].status='R';
             break;
         case 2:
-            track.Points[0].status='N';
-            track.Points[1].status='R';
+            Track.Points[0].status='N';
+            Track.Points[1].status='R';
             break;
         case 3:
-            track.Points[0].status='N';
-            track.Points[1].status='N';
+            Track.Points[0].status='N';
+            Track.Points[1].status='N';
             break;
     }
-
 }
-
-int trackPut(int sidingNumber, int numberWagons, track track){
-    if(track.Sidings[sidingNumber].Stored + numberWagons > track.Sidings[sidingNumber].Capacity){
+int trackPut(int sidingNumber, int numberWagons, track Track){
+    if(Track.Sidings[sidingNumber].Stored + numberWagons > Track.Sidings[sidingNumber].Capacity){
         return -1;
     }
-    else if(track.Sidings[0].Stored < numberWagons){
+    else if(Track.Sidings[0].Stored < numberWagons){
         return -2;
     }
     else if((sidingNumber < 0)||(sidingNumber> 3)){
         return -3;
     }
     else{
-        movePoints(sidingNumber);
+        movePoints(sidingNumber, Track);
         return numberWagons;
 
     }
 };
 int trackTake(int sidingNumber, int numberWagons, track Track){
-    if(track.Sidings[0].Stored+numberWagons > track.Sidings[0].Capacity){
+    if(Track.Sidings[0].Stored+numberWagons > Track.Sidings[0].Capacity){
         return -1;
     }
-    else if(track.Sidings[sidingNumber].Stored < numberWagons){
+    else if(Track.Sidings[sidingNumber].Stored < numberWagons){
         return -2;
     }
     else if (sidingNumber <3 || sidingNumber>3){
         return -3;
     }
 };
+void init(track Track){
+    Track.Sidings[0].Capacity=3;
+    Track.Sidings[1].Capacity=5;
+    Track.Sidings[2].Capacity=3;
+    Track.Sidings[3].Capacity=3;
+}
 int trackLoad(int s1, int s2, int s3, track Track){
-    track.Sidings[1].Stored=s1;
-    track.Sidings[2].Stored=s2;
-    track.Sidings[3].Stored=s3;
+    Track.Sidings[1].Stored=s1;
+    Track.Sidings[2].Stored=s2;
+    Track.Sidings[3].Stored=s3;
 };
 
 int processSocket (int sock, track track){
@@ -92,22 +96,19 @@ int processSocket (int sock, track track){
         a2 = atoi(atoi(a2));
         a3 = atoi(atoi(a3));
         s = trackPut(a2, a3, track);
-
-        n = write(sock,"",20);
     }
     else if (a1=="take"){
         a2 = atoi(atoi(a2));
         a3 = atoi(atoi(a3));
-        trackTake(a2,a3, track);
+        s = trackTake(a2,a3, track);
     }
     else if (a1=="load"){
         a2 = atoi(atoi(a2));
         a3 = atoi(atoi(a3));
         a4 = atoi(atoi(a4));
-        trackLoad(a2,a3,a4, track);
+        s = trackLoad(a2,a3,a4, track);
     }
-
-    n = write(sock,"I got your message\n",20);
+    n = write(sock,s,20);
     if (n < 0) {
         perror("ERROR writing to socket");
         exit(1);
@@ -122,8 +123,6 @@ int main( int argc, char *argv[] ) {
     int n, pid;
 
     track Track;
-
-
     /* First call to socket() function */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
