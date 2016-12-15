@@ -11,19 +11,24 @@
 
 class siding {
     private:
-        std::stack<wagon>  wagons;
+        std::vector<wagon>  wagons;
         int sidingCapacity;
         char sidingName;
 public:
-    int getSidingCapacity() const;
+        siding(int id, int qty);
+        const std::vector<wagon> &getWagons();
 
-    void addWagonToSiding(wagon wagon1);
+        int getSidingCapacity() const;
 
-    void setSidingCapacity(int sidingCapacity);
+        void addWagonToSiding(wagon wagon1);
 
-    char getSidingName() const;
+        void setSidingCapacity(int sidingCapacity);
 
-    void setSidingName(char sidingName);
+        char getSidingName() const;
+
+        std::string toString();
+
+        void setSidingName(char sidingName);
 };
 
 

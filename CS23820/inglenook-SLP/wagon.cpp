@@ -25,6 +25,7 @@ wagon::wagon(boost::tokenizer<boost::escaped_list_separator<char> >::iterator &d
     std::string goods_ = *data;
     data++;
 
-    vehicle(serial_no_, owner_);
-    wagon::setGoods(goods_);
+    wagon(serial_no_, goods_, owner_);
 }
+
+

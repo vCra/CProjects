@@ -4,7 +4,6 @@
 
 station trackSystem;
 
-
 void printMenu(){
     std::cout << "Inglenook Sidings aaw13" << std::endl;
     std::cout << "1. Import Wagons" << std::endl;
@@ -46,6 +45,7 @@ void moveWagons(){
 }
 void printSetup(){
     trackSystem.printSetup();
+//    TODO: Implament this
 
 }
 void importSidings(){
@@ -56,9 +56,22 @@ void importSidings(){
     switch(input){
         case 1 : {
             //Import from file
+            std::cout << "Enter the location of the file." << std::endl;
+            std::string fileLocation;
+            fileLocation = getInputString();
+            if (boost::filesystem::exists(fileLocation)){
+                std::ifstream file(fileLocation);
+                std::string line;
+                while (std::getline(file,line)){
+                    boost::tokenizer<boost::escaped_list_separator<char> > tok(line);
+                    auto tokenIterator = tok.begin();
+                    trackSystem.addSiding(siding(trackSystem.getNumberOfSidings())); //TODO: Import sidings from file
+                }
+            }
         }
         case 2 : {
-            //Import Manually
+            //TODO: Create siding manually
+
         }
         default : std::cout << "!!! Unknown Option !!!" << std::endl;
     }

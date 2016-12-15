@@ -10,15 +10,21 @@
 
 class station {
     private:
-        std::vector<siding> sidings;
+        int numberOfSidings;
+public:
+    int getNumberOfSidings() const;
+
+private:
+    std::vector<siding> sidings;
         std::vector<wagon> wagons;
 public:
     //const std::vector<siding> &getSidings() const;
     //void setSidings(const std::vector<siding> &sidings);
     void addSiding(siding &siding1);
-
+    void printSetup();
     void wagonToSidigng(wagon wagon1, siding siding1);
     void addWagon(wagon wagon_);
+    wagon moveWagon(int siding1, int siding2);
 };
 
 

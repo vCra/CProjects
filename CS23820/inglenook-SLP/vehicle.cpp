@@ -15,6 +15,7 @@
 /*!
  * \brief tokenizer based constructor
  */
+
 vehicle::vehicle(boost::tokenizer<boost::escaped_list_separator<char> >::iterator &data) {
 
     serial_no_ = std::stoi(*data);

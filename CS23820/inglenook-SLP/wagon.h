@@ -12,7 +12,7 @@ private:
 
 public:
     wagon(int id, std::string goods, std::string company){
-        vehicle(id, company);
+        vehicle(123, company);
         setGoods(goods);
     }
     wagon(boost::tokenizer<boost::escaped_list_separator<char> >::iterator &data);
