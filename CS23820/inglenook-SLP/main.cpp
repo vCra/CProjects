@@ -65,12 +65,14 @@ void importSidings(){
                 while (std::getline(file,line)){
                     boost::tokenizer<boost::escaped_list_separator<char> > tok(line);
                     auto tokenIterator = tok.begin();
-                    trackSystem.addSiding(siding(trackSystem.getNumberOfSidings())); //TODO: Import sidings from file
+                    //trackSystem.addSiding(siding(trackSystem.getNumberOfSidings(),0)); //TODO: Import sidings from file
                 }
             }
         }
         case 2 : {
             //TODO: Create siding manually
+            //trackSystem.addSiding(siding(trackSystem.getNumberOfSidings())); //TODO: Import sidings from file
+
 
         }
         default : std::cout << "!!! Unknown Option !!!" << std::endl;

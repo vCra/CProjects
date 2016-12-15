@@ -13,7 +13,7 @@ class siding {
     private:
         std::vector<wagon>  wagons;
         int sidingCapacity;
-        char sidingName;
+        int sidingName;
 public:
         siding(int id, int qty);
         const std::vector<wagon> &getWagons();
@@ -24,11 +24,19 @@ public:
 
         void setSidingCapacity(int sidingCapacity);
 
-        char getSidingName() const;
+        int getSidingName() const;
 
         std::string toString();
 
-        void setSidingName(char sidingName);
+        void setSidingName(int sidingName);
+
+        bool isEmpty();
+
+        bool isFull();
+
+        void add(wagon wagon_);
+
+        wagon pop();
 };
 
 

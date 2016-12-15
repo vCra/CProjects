@@ -5,8 +5,9 @@
 #include <iostream>
 #include "siding.h"
 
-void siding::siding(int id, int cap){
-    siding::setSidingName()
+siding::siding(int id, int cap){
+    siding::setSidingName(id);
+    siding::setSidingCapacity(cap);
 }
 
 int siding::getSidingCapacity() const {
@@ -17,11 +18,11 @@ void siding::setSidingCapacity(int sidingCapacity) {
     siding::sidingCapacity = sidingCapacity;
 }
 
-char siding::getSidingName() const {
+int siding::getSidingName() const {
     return sidingName;
 }
 
-void siding::setSidingName(char sidingName) {
+void siding::setSidingName(int sidingName) {
     siding::sidingName = sidingName;
 }
 
@@ -38,3 +39,22 @@ std::string siding::toString(){
 //        TODO: test this
     }
 }
+
+bool siding::isFull() {
+    return false;
+    //TODO
+}
+
+bool siding::isEmpty() {
+    return false;
+    //TODO
+}
+
+wagon siding::pop() {
+    return wagons.back();
+}
+
+void siding::add(wagon wagon_) {
+
+}
+

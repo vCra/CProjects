@@ -24,7 +24,7 @@ public:
     void printSetup();
     void wagonToSidigng(wagon wagon1, siding siding1);
     void addWagon(wagon wagon_);
-    wagon moveWagon(int siding1, int siding2);
+    void moveWagon(int siding1, int siding2);
 };
 
 
