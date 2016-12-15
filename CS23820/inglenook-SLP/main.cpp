@@ -1,5 +1,8 @@
 #include <iostream>
+#include <boost/filesystem.hpp>
+#include "station.h"
 
+station trackSystem;
 
 
 void printMenu(){
@@ -13,8 +16,14 @@ void printMenu(){
 }
 
 int getInput(){
-    std::cout << "input: ";
+    std::cout << "Input: ";
     int input;
+    std::cin >> input;
+    return input;
+}
+std::string getInputString(){
+    std::cout << "Input: ";
+    std::string input;
     std::cin >> input;
     return input;
 }
@@ -36,6 +45,7 @@ void moveWagons(){
     }
 }
 void printSetup(){
+    trackSystem.printSetup();
 
 }
 void importSidings(){
@@ -61,9 +71,37 @@ void importWagons(){
     switch(input){
         case 1 : {
             //Import from file
+            std::cout << "Enter the location of the file." << std::endl;
+            std::string fileLocation;
+            fileLocation = getInputString();
+            if (boost::filesystem::exists(fileLocation)){
+                std::ifstream file(fileLocation);
+                std::string line;
+                while (std::getline(file,line)){
+                    boost::tokenizer<boost::escaped_list_separator<char> > tok(line);
+                    auto tokenIterator = tok.begin();
+                    trackSystem.addWagon(wagon(tokenIterator));
+                }
+            }
+            else {
+                std::cout << "Unable to find File!" << std::endl;
+            }
+
+
+            break;
         }
         case 2 : {
-            //Import Manually
+            int wId;
+            std::string wComp;
+            std::string wGoods;
+            std::cout << "Enter the wagon's ID" << std::endl;
+            wId=getInput();
+            std::cout << "Enter the wagon's Company" << std::endl;
+            wComp=getInputString();
+            std::cout << "Enter the wagon's Goods" << std::endl;
+            wGoods = getInputString();
+            trackSystem.addWagon(wagon(wId, wGoods, wComp));
+            break;
         }
         default : std::cout << "!!! Unknown Option !!!" << std::endl;
     }

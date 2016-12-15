@@ -9,24 +9,21 @@
 #include <stack>
 #include "wagon.h"
 
-class sidings {
+class siding {
     private:
-        std::stack<wagon> wagons;
+        std::stack<wagon>  wagons;
         int sidingCapacity;
         char sidingName;
 public:
     int getSidingCapacity() const;
+
+    void addWagonToSiding(wagon wagon1);
 
     void setSidingCapacity(int sidingCapacity);
 
     char getSidingName() const;
 
     void setSidingName(char sidingName);
-
-public:
-    const std::stack<wagon> &getWagons() const;
-
-    void setWagons(const std::stack<wagon> &wagons);
 };
 
 

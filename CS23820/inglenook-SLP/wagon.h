@@ -7,12 +7,16 @@
 #include "vehicle.h"
 
 class wagon : public vehicle{
-public:
 private:
     std::string goods;
-public:
-    const std::string &getGoods() const;
 
+public:
+    wagon(int id, std::string goods, std::string company){
+        vehicle(id, company);
+        setGoods(goods);
+    }
+    wagon(boost::tokenizer<boost::escaped_list_separator<char> >::iterator &data);
+    const std::string &getGoods() const;
     void setGoods(const std::string &goods);
 };
 
