@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aaron@vcra.net/ClionProjects/CS23820/inglenook-SBP/main.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+netdb.h
+-
+strings.h
+-
+string.h
+-
+

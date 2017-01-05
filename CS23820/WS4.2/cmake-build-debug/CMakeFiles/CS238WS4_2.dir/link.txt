@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -Wextra -std=c++11 -g   CMakeFiles/CS238WS4_2.dir/main.cpp.o  -o CS238WS4_2 
