@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -g   CMakeFiles/CS238WS4.dir/main.cpp.o CMakeFiles/CS238WS4.dir/fileCode.c.o  -o CS238WS4 
