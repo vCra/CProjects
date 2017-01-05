@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -g   CMakeFiles/SBP.dir/main.cpp.o CMakeFiles/SBP.dir/main.c.o  -o SBP 
