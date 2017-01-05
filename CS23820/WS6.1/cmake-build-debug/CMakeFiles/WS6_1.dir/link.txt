@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/WS6_1.dir/recursive.cpp.o  -o WS6_1 

@@ -1,3 +1,0 @@
-/home/aaron@vcra.net/ClionProjects/CS23820/inglenook-SBP/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/aaron@vcra.net/ClionProjects/CS23820/inglenook-SBP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/aaron@vcra.net/ClionProjects/CS23820/inglenook-SBP/cmake-build-debug/CMakeFiles/inglenook_SBP.dir

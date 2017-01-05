@@ -1,1 +1,0 @@
-/usr/bin/cc  -g   CMakeFiles/CS238WS3.dir/main.c.o  -o CS238WS3 
