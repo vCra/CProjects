@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/WS6_3.dir/main.cpp.o CMakeFiles/WS6_3.dir/Pension.cpp.o CMakeFiles/WS6_3.dir/Employee.cpp.o CMakeFiles/WS6_3.dir/Date.cpp.o  -o WS6_3 

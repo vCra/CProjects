@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/WS5_Server.dir/main.cpp.o  -o WS5_Server 
